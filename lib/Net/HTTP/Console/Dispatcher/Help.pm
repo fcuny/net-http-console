@@ -66,9 +66,7 @@ EOF
     method _help_about_load {
         print <<EOF
 load libname    -  load a MooseX::Net::API library
-
-        print "available commands:\n";
-        map { print "- " . $_ . "\n" } @methods;
+EOF
     }
 
     method _get_help_for_command($cmd_name) {

@@ -6,7 +6,7 @@ role Net::HTTP::Console::Role::Headers {
     
     has custom_headers => (
         traits  => ['Hash'],
-        is      => 'ro',
+        is      => 'rw',
         isa     => 'HashRef[Str]',
         default => sub { {} },
         handles => {
