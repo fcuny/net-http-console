@@ -28,7 +28,7 @@ role Net::HTTP::Console::Role::API {
         my $api;
 
         if ($self->has_specification) {
-            $api = Net::HTTP::API::Spec->load_from_spec($self->spec);
+            $api = Net::HTTP::API::Spec->new_from_spec($self->spec);
         }else{
             try {
                 Class::MOP::load_class($lib);
