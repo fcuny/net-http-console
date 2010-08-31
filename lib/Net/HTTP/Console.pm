@@ -16,6 +16,7 @@ class Net::HTTP::Console {
     has url         => (isa => 'Str', is => 'rw', predicate => 'has_url');
     has format      => (isa => 'Str', is => 'rw', predicate => 'has_format');
     has format_mode => (isa => 'Str', is => 'rw', predicate => 'has_format_mode');
+    has spec        => (isa => 'Str', is => 'rw', predicate => 'has_specification');
 }
 
 1;
