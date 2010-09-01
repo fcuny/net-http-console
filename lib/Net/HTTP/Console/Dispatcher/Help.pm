@@ -80,6 +80,13 @@ EOF
 
         print $method->documentation;
     }
+
+    method _list_commands() {
+        my @methods = $self->application->api_object->meta->get_all_net_api_methods();
+        foreach my $method (@methods) {
+            print " - ".$method."\n";
+        }
+    }
 }
 
 1;
